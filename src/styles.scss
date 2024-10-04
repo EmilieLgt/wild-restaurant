@@ -1,0 +1,50 @@
+// ajoutés par Angular Material à l'installation
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+//
+
+h1 {
+  padding: 0.5em;
+  text-align: center;
+  color: white;
+  background-color: var(
+    --mat-stepper-header-selected-state-icon-background-color
+  );
+}
+
+h2 {
+  padding: 0.5em;
+  text-align: center;
+  color: var(--mat-stepper-header-selected-state-icon-background-color);
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+.menu,
+.reservation-container {
+  width: 80%;
+  margin: auto;
+}
+.example-card {
+  max-width: 500px;
+  img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+}
+.mat-mdc-tab-body-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+}

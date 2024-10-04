@@ -1,0 +1,39 @@
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>
+      <!-- étoile si le plat est liké -->
+      @if(recipe.isLiked) {
+      <mat-icon style="color: goldenrod">star</mat-icon>}
+      {{ recipe.name }}
+    </mat-card-title>
+    <mat-card-subtitle>{{ recipe.price }} €</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="recipe.image" [alt]="recipe.name" />
+
+  <mat-card-content>
+    {{ recipe.description }}
+
+    <!-- affiche les allergenes si bouton cliqué-->
+    @if(recipe.isAllergenToggle) {<mat-chip-listbox>
+      @for (allergen of recipe.allergens ; track $index) {
+      <mat-chip>{{ allergen }}</mat-chip
+      >} </mat-chip-listbox
+    >}
+  </mat-card-content>
+
+  <mat-card-actions>
+    <!-- afficher/cacher les allergènes -->
+    <button mat-button (click)="toggleAllergens()">
+      <mat-icon>fastfood</mat-icon> Allergènes
+    </button>
+
+    <!--like/dislike le plat -->
+    @if(recipe.isLiked){
+    <button mat-button (click)="toggleLike()">
+      <mat-icon>thumb_down_alt</mat-icon> Dislike</button
+    >} @else {
+    <button mat-button n (click)="toggleLike()">
+      <mat-icon>thumb_up_alt</mat-icon> Like</button
+    >}
+  </mat-card-actions>
+</mat-card>

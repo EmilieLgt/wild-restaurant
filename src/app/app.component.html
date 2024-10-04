@@ -1,0 +1,16 @@
+<h1 class="mat-primary mat-bg-primary">{{ title }}</h1>
+<nav>
+  <button mat-raised-button (click)="navigateToMenu()">
+    <mat-icon>restaurant</mat-icon>
+    Menu
+  </button>
+  <button mat-raised-button (click)="navigateToRes()">
+    <mat-icon>event</mat-icon>
+    Reservation
+  </button>
+  <button mat-raised-button (click)="navigateToTest()">
+    <mat-icon> settings_applications </mat-icon>
+    Tests
+  </button>
+</nav>
+<router-outlet></router-outlet>
